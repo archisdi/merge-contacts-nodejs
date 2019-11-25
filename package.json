@@ -1,0 +1,14 @@
+{
+  "name": "contact-merge-node",
+  "version": "1.0.0",
+  "description": "merge duplicated contac data",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "archie isdiningrat",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
+}
