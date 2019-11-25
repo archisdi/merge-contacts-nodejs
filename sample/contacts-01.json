@@ -1,0 +1,33 @@
+[
+    {
+        "fullname": "Ahmad Bustomi",
+        "email": {
+            "kantor": "ahmad.b@email.com"
+        },
+        "phone": {
+            "kantor": "0211234678",
+            "hp": "082112300676"
+        }
+    },
+    {
+        "fullname": "Ahmad Bustomi",
+        "email": {
+            "personal": "ahmad.b@ahmadbustomi.com"
+        },
+        "phone": {
+            "hp": "082112300676",
+            "hp_jadul": "081314735686"
+        }
+    },
+    {
+        "fullname": "Archie Isdiningrat",
+        "email": {
+            "personal": "archie.isdiningrat@gmail.com",
+            "larisin": "archie.isdiningrat@larisin.id"
+        },
+        "phone": {
+            "hp": "081242480700",
+            "home": "0411413870"
+        }
+    }
+]
