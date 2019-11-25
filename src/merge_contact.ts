@@ -51,12 +51,9 @@ function MergeContact(name: string, contacts: RawContact[]): Contact {
                     ...contact[attrKey]
                 }
             } 
-            else {
-                contact.other_field = {
-                    ...itemContact[attrKey],
-                    ...contact.other_field
-                }
-            }             
+            else if (contact.other_field) {
+                contact.other_field[attrKey] = itemContact[attrKey]
+            }   
         });
     })
 

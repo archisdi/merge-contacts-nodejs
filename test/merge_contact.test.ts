@@ -50,6 +50,69 @@ test.serial('should successfully merge two contact from example git page', async
         });
 });
 
+test.serial('should successfully merge two contact with complete attributes', async (t: any): Promise < void > => {
+    const data = [{
+            "fullname": "Archie Isdiningrat",
+            "email": {
+                "larisin": "archie.isdiningrat@larisin.id"
+            },
+            "phone": {
+                "hp": "08124242123"
+            }
+        },
+        {
+            "fullname": "Archie Isdiningrat",
+            "email": {
+                "bizzy": "archie.isdiningrat@bizzy.co.id"
+            },
+            "address": {
+                "makassar": "pettarni",
+                "jakarta": "blora"
+            },
+            "hobby": "eating",
+            "skills": ["coding", "gaming"],
+            "school": {
+                "highschool": "smk telkom",
+                "university": "telkom univ"
+            }
+        },
+        {
+            "fullname": {}
+        }
+    ];
+
+    const expected = [{
+        "fullname": "Archie Isdiningrat",
+        "address": {
+            "makassar": "pettarni",
+            "jakarta": "blora"
+        },
+        "email": {
+            "bizzy": "archie.isdiningrat@bizzy.co.id",
+            "larisin": "archie.isdiningrat@larisin.id"
+        },
+        "phone": {
+            "hp": "08124242123"
+        },
+        "other_field": {
+            "hobby": "eating",
+            "skills": ["coding", "gaming"],
+            "school": {
+                "highschool": "smk telkom",
+                "university": "telkom univ"
+            }
+        }
+    }];
+
+    await MergeContact(data)
+        .then((result): void => {
+            t.deepEqual(result, expected);
+        })
+        .catch((err: any): void => {
+            t.fail(err.message);
+        });
+});
+
 test.beforeEach('Initialize New Sandbox Before Each Test', (t: any): void => {
     t.context.sandbox = sinon.createSandbox();
 });
