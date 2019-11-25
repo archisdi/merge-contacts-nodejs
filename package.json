@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node ./src/index.js"
+    "start": "./node_modules/.bin/tsc && node ./src/index.js"
   },
   "author": "archie isdiningrat",
   "license": "ISC",
   "devDependencies": {
     "@types/bluebird": "^3.5.29",
-    "ts-node": "^8.5.2",
-    "tslib": "^1.10.0",
     "typescript": "^3.7.2"
   },
   "dependencies": {
