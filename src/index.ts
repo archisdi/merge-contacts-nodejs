@@ -1,4 +1,4 @@
-import * as Inputs from "../sample/contacts-01.json";
+import * as Inputs from "../sample/contacts.json";
 import MergeContact from './merge_contact';
 
 /** Main method */

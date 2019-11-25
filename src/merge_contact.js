@@ -33,10 +33,10 @@ function MergeContact(name, contacts) {
                 return true;
             }
             else if (attrKey === 'phone' || attrKey === 'email' || attrKey === 'address') {
-                contact[attrKey] = Object.assign(Object.assign({}, itemContact[attrKey]), contact[attrKey]);
+                contact[attrKey] = Object.assign({}, itemContact[attrKey], contact[attrKey]);
             }
             else {
-                contact.other_field = Object.assign(Object.assign({}, itemContact[attrKey]), contact.other_field);
+                contact.other_field = Object.assign({}, itemContact[attrKey], contact.other_field);
             }
         });
     });
@@ -51,3 +51,4 @@ function default_1(contacts) {
     });
 }
 exports.default = default_1;
+//# sourceMappingURL=merge_contact.js.map
