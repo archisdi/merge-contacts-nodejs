@@ -30,6 +30,12 @@ import { Contact, AnyObject, RawContact } from './typings/common';
     return groupedObject;
 }
 
+/**
+ * 
+ * @param name 
+ * @param contacts 
+ * @description merge multiple contacts into one
+ */
 function MergeContact(name: string, contacts: RawContact[]): Contact {
     const contact: Contact = { 
         fullname: name, 
@@ -37,7 +43,7 @@ function MergeContact(name: string, contacts: RawContact[]): Contact {
         email: {}, 
         phone: {}, 
         other_field: {} 
-    }    
+    }
 
     contacts.forEach(itemContact => {
         const itemContactAttribute = Object.keys(itemContact);
