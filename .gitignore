@@ -1,4 +1,5 @@
-.vaso.DS_Store
+.vaso.
+DS_Store
 node_modules/
 build/
 dist/
